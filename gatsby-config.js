@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Khắc dấu Hữu Hạ - Mỹ Tho - Tiền Giang`,
+    description: `Dịch vụ khắc dấu chuyên nghiệp. Chuyên bán các sản phẩm về dấu và các sản phẩm trang trí văn phòng, hội trường.`,
+    author: `Trần Nhật Duy <duytn.hcm@gmail.com>`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
