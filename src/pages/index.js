@@ -1,11 +1,13 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { graphql } from 'gatsby'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <div>
     <Helmet>
-      <meta charSet="utf-8" />
-      <title>Khắc dấu Hữu Hạ - Mỹ Tho - Tiền Giang</title>
+      <title>{data.site.siteMetadata.title}</title>
+      <meta name="description" content={data.site.siteMetadata.description} />
+      <meta name="author" content={data.site.siteMetadata.author} />
     </Helmet>
     <h1>Website đang được xây dựng.</h1>
     <h3>Vui lòng truy cập lại sau.</h3>
@@ -13,3 +15,15 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+      }
+    }
+  }
+`
