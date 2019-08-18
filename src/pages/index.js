@@ -1,29 +1,10 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
+import LayoutSwitch from '../components/LayoutSwitch/LayoutSwitch'
 
-const IndexPage = ({ data }) => (
-  <div>
-    <Helmet>
-      <title>{data.site.siteMetadata.title}</title>
-      <meta name="description" content={data.site.siteMetadata.description} />
-      <meta name="author" content={data.site.siteMetadata.author} />
-    </Helmet>
-    <h1>Website đang được xây dựng.</h1>
-    <h3>Vui lòng truy cập lại sau.</h3>
-  </div>
+const IndexPage = () => (
+  <LayoutSwitch>
+    <h1>Hello World!</h1>
+  </LayoutSwitch>
 )
 
 export default IndexPage
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
-  }
-`
