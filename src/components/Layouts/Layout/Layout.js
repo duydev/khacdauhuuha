@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-
-import Header from '../Header/Header'
 import './Layout.scss'
+import { Header, Footer } from '../../Shared'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,10 +27,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, made with <span className="heart" /> by{' '}
-          <a href="https://duydev.me">Trần Nhật Duy</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )

@@ -1,9 +1,11 @@
 import React from 'react'
-import LayoutSwitch from '../components/LayoutSwitch/LayoutSwitch'
+import { LayoutSwitch } from '../components/Layouts'
 
 const IndexPage = () => (
-  <LayoutSwitch>
-    <h1>Hello World!</h1>
+  <LayoutSwitch title="Trang chủ">
+    <main>
+      <h1>Hello World!</h1>
+    </main>
   </LayoutSwitch>
 )
 

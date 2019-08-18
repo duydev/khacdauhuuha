@@ -3,6 +3,7 @@ module.exports = {
     title: `Khắc dấu Hữu Hạ - Mỹ Tho - Tiền Giang`,
     description: `Dịch vụ khắc dấu chuyên nghiệp. Chuyên bán các sản phẩm về dấu và các sản phẩm trang trí văn phòng, hội trường.`,
     author: `Trần Nhật Duy <duytn.hcm@gmail.com>`,
+    twitter: 'duytn_hcm',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
