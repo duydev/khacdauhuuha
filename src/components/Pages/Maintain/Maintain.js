@@ -1,5 +1,6 @@
 import React from 'react'
 import { CssBaseline, Paper, Typography, Box } from '@material-ui/core'
+import { Footer } from '../../Shared'
 import './Maintain.scss'
 
 const Maintain = () => (
@@ -25,6 +26,7 @@ const Maintain = () => (
         />
       </Box>
     </Paper>
+    <Footer />
   </main>
 )
 
