@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-import './Layout.scss'
 import { Header, Footer } from '../../Shared'
 
 const Layout = ({ children }) => {
@@ -16,6 +15,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
+    require('./Layout.scss')
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div

@@ -1,7 +1,8 @@
 import React from 'react'
-import './Maintain.module.scss'
 
 const Maintain = () => (
+  require('./Maintain.scss');
+
   <div id="maintain">
     <h1>Website đang được xây dựng.</h1>
     <h3>Vui lòng truy cập lại sau.</h3>
