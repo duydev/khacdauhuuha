@@ -3,7 +3,9 @@ import { LayoutSwitch } from '../components/Layouts'
 
 const IndexPage = () => (
   <LayoutSwitch title="Trang chủ">
-    <h1>Hello World!</h1>
+    <main>
+      <h1>Hello World!</h1>
+    </main>
   </LayoutSwitch>
 )
 
