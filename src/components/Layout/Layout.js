@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, make with <span className="heart" /> by{' '}
+          © {new Date().getFullYear()}, made with <span className="heart" /> by{' '}
           <a href="https://duydev.me">Trần Nhật Duy</a>
         </footer>
       </div>

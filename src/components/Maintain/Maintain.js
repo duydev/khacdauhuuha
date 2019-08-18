@@ -12,7 +12,7 @@ const Maintain = () => (
     />
 
     <p>
-      &copy; {new Date().getFullYear()} - make with <span className="heart" />{' '}
+      &copy; {new Date().getFullYear()} - made with <span className="heart" />{' '}
       by <a href="https://duydev.me">Trần Nhật Duy</a>.
     </p>
   </div>
