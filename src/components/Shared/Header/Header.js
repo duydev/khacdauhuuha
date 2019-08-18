@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { CssBaseline, AppBar, Toolbar, Typography } from '@material-ui/core'
+import MainNav from '../MainNav/MainNav'
 import './Header.scss'
 
 const Header = ({ siteTitle }) => (
@@ -11,6 +12,7 @@ const Header = ({ siteTitle }) => (
         <Typography variant="h6" color="inherit" noWrap>
           Khắc dấu Hữu Hạ
         </Typography>
+        <MainNav />
       </Toolbar>
     </AppBar>
   </header>

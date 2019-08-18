@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import { Maintain } from '../../Pages'
+import Layout from '../Layout/Layout'
 import { SEO } from '../../Shared'
 
 class LayoutSwitch extends React.Component {
@@ -17,19 +18,14 @@ class LayoutSwitch extends React.Component {
   }
 
   render() {
-    let content = null
-    if (this.state.isMaintain) {
-      const Maintain = require('../../Pages').Maintain
-      content = <Maintain />
-    } else {
-      const Layout = require('../Layout/Layout').default
-      content = <Layout>{this.props.children}</Layout>
-    }
-
     return (
       <>
         <SEO lang="vi" title={this.state.title} />
-        {content}
+        {this.state.isMaintain ? (
+          <Maintain />
+        ) : (
+          <Layout>{this.props.children}</Layout>
+        )}
       </>
     )
   }
