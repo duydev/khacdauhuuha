@@ -1,5 +1,5 @@
 import React from 'react'
-import './Maintain.scss'
+import './Maintain.module.scss'
 
 const Maintain = () => (
   <div id="maintain">
