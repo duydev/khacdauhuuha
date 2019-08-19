@@ -1,13 +1,20 @@
 import React from 'react'
-import './Footer.scss'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/styles'
+import styles from './styles'
 
-const Footer = () => {
+const Footer = ({ classes }) => {
   return (
-    <footer>
-      © {new Date().getFullYear()} - Made with <span className="heart" /> by{' '}
+    <footer className={classes.root}>
+      © {new Date().getFullYear()} - Made with{' '}
+      <span className={classes.heart} /> by{' '}
       <a href="https://duydev.me">Trần Nhật Duy</a>
     </footer>
   )
 }
 
-export default Footer
+Footer.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(Footer)
