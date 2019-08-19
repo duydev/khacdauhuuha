@@ -1,3 +1,4 @@
-import LayoutSwitch from './LayoutSwitch/LayoutSwitch'
+import DefaultLayout from './DefaultLayout/DefaultLayout'
+import EmptyLayout from './EmptyLayout/EmptyLayout'
 
-export { LayoutSwitch }
+export { DefaultLayout, EmptyLayout }

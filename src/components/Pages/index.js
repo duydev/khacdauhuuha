@@ -1,3 +1,3 @@
-import Maintain from './Maintain/Maintain'
+import MaintainPage from './MaintainPage/MaintainPage'
 
-export { Maintain }
+export { MaintainPage }

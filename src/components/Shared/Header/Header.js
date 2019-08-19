@@ -1,29 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { CssBaseline, AppBar, Toolbar, Typography } from '@material-ui/core'
+import { CssBaseline, AppBar, Toolbar, Container } from '@material-ui/core'
+import { withStyles } from '@material-ui/styles'
 import MainNav from '../MainNav/MainNav'
-import './Header.scss'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import styles from './styles'
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <CssBaseline />
-    <AppBar color="primary" position="relative">
-      <Toolbar>
-        <Typography variant="h6" color="inherit" noWrap>
-          Khắc dấu Hữu Hạ
-        </Typography>
-        <MainNav />
-      </Toolbar>
-    </AppBar>
-  </header>
-)
+const Header = ({ classes }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <>
+      <CssBaseline />
+      <AppBar color="primary" position="relative">
+        <Toolbar gutters={false}>
+          <Container className={classes.containerWrapper}>
+            <Link className={classes.logoWrapper} to="/">
+              <Img fixed={data.logo.childImageSharp.fixed} />
+            </Link>
+            <MainNav />
+          </Container>
+        </Toolbar>
+      </AppBar>
+    </>
+  )
+}
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  classes: PropTypes.object.isRequired,
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default withStyles(styles)(Header)

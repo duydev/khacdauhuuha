@@ -1,12 +1,18 @@
 import React from 'react'
-import { LayoutSwitch } from '../components/Layouts'
+import { SEO } from '../components/Shared'
+import { DefaultTheme } from '../components/Themes'
+import { MaintainMode } from '../components/Utils'
+import { DefaultLayout } from '../components/Layouts'
 
 const IndexPage = () => (
-  <LayoutSwitch title="Trang chủ">
-    <main>
-      <h1>Hello World!</h1>
-    </main>
-  </LayoutSwitch>
+  <DefaultTheme>
+    <MaintainMode>
+      <SEO title="Trang chủ" />
+      <DefaultLayout>
+        <h1>Hello World!</h1>
+      </DefaultLayout>
+    </MaintainMode>
+  </DefaultTheme>
 )
 
 export default IndexPage
