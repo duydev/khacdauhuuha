@@ -3,7 +3,7 @@ import { Paper, Typography, Box, Container } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles'
 import { Footer } from '../../Shared'
 import { EmptyLayout } from '../../Layouts'
-import { SEO } from '../components/Shared'
+import { SEO } from '../../Shared'
 import styles from './styles'
 
 const MaintainPage = ({ classes }) => (
