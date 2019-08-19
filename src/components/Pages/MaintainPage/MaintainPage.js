@@ -3,10 +3,12 @@ import { Paper, Typography, Box, Container } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles'
 import { Footer } from '../../Shared'
 import { EmptyLayout } from '../../Layouts'
+import { SEO } from '../components/Shared'
 import styles from './styles'
 
 const MaintainPage = ({ classes }) => (
   <EmptyLayout>
+    <SEO title="Bảo trì" />
     <Container component="main" className={classes.root} fixed>
       <Paper>
         <Typography variant="h4" align="center" color="primary" noWrap>
