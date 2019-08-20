@@ -3,13 +3,20 @@ export default {
     '& a': {
       '& button': {
         color: 'white',
+        paddingLeft: '16px',
+        paddingRight: '16px',
+
         '&:hover': {
           textDecoration: 'underline',
+        },
+
+        '& .MuiIcon-root': {
+          fontSize: '1.2rem',
         },
       },
       '&.active': {
         '& button': {
-          textDecoration: 'underline',
+          background: 'rgba(0, 0, 0, 0.2)',
         },
       },
     },
