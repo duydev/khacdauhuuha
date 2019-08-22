@@ -4,6 +4,7 @@ module.exports = {
     description: `Dịch vụ khắc dấu chuyên nghiệp. Chuyên bán các sản phẩm về dấu và các sản phẩm trang trí văn phòng, hội trường.`,
     author: `Trần Nhật Duy <duytn.hcm@gmail.com>`,
     twitter: 'duytn_hcm',
+    siteUrl: `https://khacdauhuuha.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -58,6 +59,7 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-no-sourcemaps`,
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
