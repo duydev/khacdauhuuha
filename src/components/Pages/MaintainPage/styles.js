@@ -33,5 +33,17 @@ export default theme => ({
         },
       },
     },
+    '& footer': {
+      paddingTop: '10px',
+      textAlign: 'center',
+      '& a': {
+        textDecoration: 'none',
+        fontWeight: 'bold',
+        color: 'blue',
+        '&:hover': {
+          color: 'red',
+        },
+      },
+    },
   },
 })

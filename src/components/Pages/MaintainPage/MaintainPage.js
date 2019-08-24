@@ -1,14 +1,26 @@
 import React from 'react'
-import { Paper, Typography, Box, Container } from '@material-ui/core'
-import { withStyles } from '@material-ui/styles'
-import { Footer } from '../../Shared'
-import { EmptyLayout } from '../../Layouts'
-import { SEO } from '../../Shared'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import {
+  Paper,
+  Typography,
+  Box,
+  Container,
+  withStyles,
+} from '@material-ui/core'
+
+import { RootLayout } from '../../Layouts'
+
 import styles from './styles'
 
-const MaintainPage = ({ classes }) => (
-  <EmptyLayout>
-    <SEO title="Bảo trì" />
+const MaintainPage = ({ classes, data }) => (
+  <RootLayout>
+    <Helmet
+      htmlAttributes={data.htmlAttributes}
+      title={data.title}
+      titleTemplate={data.titleTemplate}
+      meta={data.meta}
+    />
     <Container component="main" className={classes.root} fixed>
       <Paper>
         <Typography variant="h4" align="center" color="primary" noWrap>
@@ -30,9 +42,31 @@ const MaintainPage = ({ classes }) => (
           />
         </Box>
       </Paper>
-      <Footer />
+      <footer>
+        © {new Date().getFullYear()} - Made with <span className="heart" /> by{' '}
+        <a href="https://duydev.me">Trần Nhật Duy</a>
+      </footer>
     </Container>
-  </EmptyLayout>
+  </RootLayout>
 )
+
+MaintainPage.propTypes = {
+  classes: PropTypes.object.isRequired,
+  data: PropTypes.object,
+}
+
+MaintainPage.defaultProps = {
+  data: {
+    htmlAttributes: { lang: 'vi' },
+    title: 'Bảo trì',
+    titleTemplate: '%s | Khắc dấu Hữu Hạ - Mỹ Tho - Tiền Giang',
+    meta: [
+      {
+        name: `description`,
+        content: `Dịch vụ khắc dấu chuyên nghiệp. Chuyên bán các sản phẩm về dấu và các sản phẩm trang trí văn phòng, hội trường.`,
+      },
+    ],
+  },
+}
 
 export default withStyles(styles)(MaintainPage)

@@ -1,22 +1,6 @@
-export default {
+export default theme => ({
   root: {
-    paddingTop: '10px',
-    textAlign: 'center',
-    '& a': {
-      textDecoration: 'none',
-      fontWeight: 'bold',
-      color: 'blue',
-      '&:hover': {
-        color: 'red',
-      },
-    },
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.primary.contrastText,
   },
-  heart: {
-    '&::before': {
-      content: `'❤'`,
-      color: 'red',
-      fontSize: '1.5em',
-      fontWeight: 700,
-    },
-  },
-}
+})

@@ -1,5 +1,5 @@
 export default theme => ({
-  mainContent: {
+  root: {
     padding: '0 10px',
     '& > .MuiPaper-root': {
       width: '100%',
