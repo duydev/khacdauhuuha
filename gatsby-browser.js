@@ -6,13 +6,13 @@ import { MaintainMode } from './src/components/Utils'
 import { DefaultLayout } from './src/components/Layouts'
 
 export const wrapRootElement = ({ element }) => {
-  return (
-    <MuiThemeProvider theme={theme}>
-      <MaintainMode>{element}</MaintainMode>
-    </MuiThemeProvider>
-  )
+  return <MuiThemeProvider theme={theme}>{element}</MuiThemeProvider>
 }
 
 export const wrapPageElement = ({ element }) => {
-  return <DefaultLayout>{element}</DefaultLayout>
+  return (
+    <MaintainMode>
+      <DefaultLayout>{element}</DefaultLayout>
+    </MaintainMode>
+  )
 }
