@@ -1,10 +1,9 @@
-export default {
-  containerWrapper: {
-    padding: 0,
-    display: 'flex',
-    flexWrap: 'wrap',
+export default theme => ({
+  root: {
+    padding: theme.spacing(1, 0),
+
+    '& div > a': {
+      fontSize: 0,
+    },
   },
-  logoWrapper: {
-    flex: 1,
-  },
-}
+})
