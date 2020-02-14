@@ -6,7 +6,6 @@ import store from "../redux/store";
 import theme from "../theme";
 
 import PageHeader from "../containers/PageHeader";
-import Layout from "../containers/Layout";
 
 class MyApp extends App {
   componentDidMount() {
@@ -26,9 +25,7 @@ class MyApp extends App {
         <PageHeader />
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <Component {...pageProps} />
         </ThemeProvider>
       </Provider>
     );

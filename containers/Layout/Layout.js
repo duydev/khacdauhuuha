@@ -2,16 +2,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
+import { changePageTitle } from "../../redux/app/actions";
+
 import DefaultLayout from "../../components/Layouts/DefaultLayout";
 
 class Layout extends React.Component {
   static propTypes = {
-    name: PropTypes.string
+    name: PropTypes.string,
+    pageTitle: PropTypes.string,
+    changePageTitle: PropTypes.func.isRequired
   };
 
   static defaultProps = {
     name: "default"
   };
+
+  componentDidMount() {
+    const { pageTitle, changePageTitle } = this.props;
+
+    if (pageTitle) {
+      changePageTitle(pageTitle);
+    }
+  }
 
   getLayoutComponent(name) {
     switch (name) {
@@ -21,7 +33,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { name, ...rest } = this.props;
+    const { name, changePageTitle, ...rest } = this.props;
 
     const Component = this.getLayoutComponent(name);
 
@@ -33,4 +45,8 @@ const mapStateToProps = state => ({
   name: state.app.pageLayout
 });
 
-export default connect(mapStateToProps)(Layout);
+const mapDispatchToProps = {
+  changePageTitle
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

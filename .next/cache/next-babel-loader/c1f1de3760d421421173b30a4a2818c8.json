@@ -1,1 +1,0 @@
-{"ast":null,"code":"export var SITE_TITLE = \"DEMO APP\";","map":{"version":3,"sources":["/Users/duydev/Temp/khacdauhuuha/contants/common.js"],"names":["SITE_TITLE"],"mappings":"AAAA,OAAO,IAAMA,UAAU,GAAG,UAAnB","sourcesContent":["export const SITE_TITLE = \"DEMO APP\";\n"]},"metadata":{},"sourceType":"module"}
