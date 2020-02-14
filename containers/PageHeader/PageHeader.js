@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { connect } from "react-redux";
 
 const PageHeader = ({ siteTitle, pageTitle }) => (
@@ -10,12 +10,7 @@ const PageHeader = ({ siteTitle, pageTitle }) => (
     titleTemplate={`%s - ${siteTitle}`}
     htmlAttributes={{ lang: "vi" }}
     meta={[{ charSet: "utf-8" }]}
-  >
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    />
-  </Helmet>
+  />
 );
 
 PageHeader.propTypes = {
