@@ -2,7 +2,8 @@ import { SITE_TITLE } from "../../contants/common";
 
 const initialState = {
   siteTitle: SITE_TITLE,
-  pageTitle: undefined
+  pageTitle: undefined,
+  pageLayout: undefined
 };
 
 const handlers = {};

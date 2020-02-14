@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { connect } from "react-redux";
 
@@ -17,8 +18,14 @@ const PageHeader = ({ siteTitle, pageTitle }) => (
   </Helmet>
 );
 
+PageHeader.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
+  pageTitle: PropTypes.string
+};
+
 const mapStateToProps = state => ({
-  ...state.app
+  siteTitle: state.app.siteTitle,
+  pageTitle: state.app.pageTitle
 });
 
 export default connect(mapStateToProps)(PageHeader);
