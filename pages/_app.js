@@ -1,6 +1,7 @@
 import App from "next/app";
 import { Provider } from "react-redux";
 import { ThemeProvider, CssBaseline } from "@material-ui/core";
+import { HelmetProvider } from "react-helmet-async";
 
 import store from "../redux/store";
 import theme from "../theme";
@@ -22,11 +23,13 @@ class MyApp extends App {
 
     return (
       <Provider store={store}>
-        <PageHeader />
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Component {...pageProps} />
-        </ThemeProvider>
+        <HelmetProvider>
+          <PageHeader />
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </HelmetProvider>
       </Provider>
     );
   }
