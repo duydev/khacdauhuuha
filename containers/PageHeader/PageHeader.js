@@ -10,12 +10,7 @@ const PageHeader = ({ siteTitle, pageTitle }) => (
     titleTemplate={`%s - ${siteTitle}`}
     htmlAttributes={{ lang: "vi" }}
     meta={[{ charSet: "utf-8" }]}
-  >
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    />
-  </Helmet>
+  />
 );
 
 PageHeader.propTypes = {

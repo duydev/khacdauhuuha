@@ -263,15 +263,7 @@ var PageHeader = function PageHeader(_ref) {
       lineNumber: 7
     },
     __self: this
-  }, __jsx("link", {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }));
+  });
 };
 
 PageHeader.propTypes = {
