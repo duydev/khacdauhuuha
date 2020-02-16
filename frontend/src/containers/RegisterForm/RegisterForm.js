@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { reduxForm, Field } from "redux-form";
-import { withStyles } from "@material-ui/core";
+import { withStyles, Button } from "@material-ui/core";
 
 import FormHelper from "../../helpers/form";
 
@@ -36,7 +36,7 @@ class RegisterForm extends React.Component {
   };
 
   render() {
-    const { classes, handleSubmit } = this.props;
+    const { classes, handleSubmit, pristine, submitting } = this.props;
 
     return (
       <form className={classes.root} onSubmit={handleSubmit(this.handleSubmit)}>
@@ -56,6 +56,14 @@ class RegisterForm extends React.Component {
           fullWidth
           label="Password:"
         />
+        <Button
+          color="primary"
+          variant="outlined"
+          type="submit"
+          disabled={pristine || submitting}
+        >
+          Submit
+        </Button>
       </form>
     );
   }
