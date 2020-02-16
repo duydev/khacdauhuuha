@@ -1,5 +1,9 @@
 import BaseAPI from "./base";
 
-class UserAPI extends BaseAPI {}
+class UserAPI extends BaseAPI {
+  constructor() {
+    super("/users");
+  }
+}
 
-export default UserAPI;
+export default new UserAPI();

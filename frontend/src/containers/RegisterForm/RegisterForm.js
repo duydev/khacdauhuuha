@@ -7,6 +7,8 @@ import { withStyles, Button } from "@material-ui/core";
 
 import FormHelper from "../../helpers/form";
 
+import { register } from "../../redux/register-form/actions";
+
 import styles from "./styles";
 
 class RegisterForm extends React.Component {
@@ -32,7 +34,7 @@ class RegisterForm extends React.Component {
   };
 
   handleSubmit = values => {
-    console.log(values);
+    this.props.register(values);
   };
 
   render() {
@@ -69,8 +71,16 @@ class RegisterForm extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  ...state.registerForm
+});
+
+const mapDispatchToProps = {
+  register
+};
+
 export default compose(
-  connect(),
+  connect(mapStateToProps, mapDispatchToProps),
   reduxForm({ form: "RegisterForm", validate: RegisterForm.validate }),
   withStyles(styles, { name: "RegisterForm" })
 )(RegisterForm);
