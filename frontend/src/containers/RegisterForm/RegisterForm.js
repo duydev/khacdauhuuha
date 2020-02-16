@@ -6,8 +6,8 @@ import { reduxForm, Field } from "redux-form";
 import { withStyles, Button } from "@material-ui/core";
 
 import FormHelper from "../../helpers/form";
-
 import { register } from "../../redux/register-form/actions";
+import LoadingScreen from "../../components/LoadingScreen";
 
 import styles from "./styles";
 
@@ -38,35 +38,41 @@ class RegisterForm extends React.Component {
   };
 
   render() {
-    const { classes, handleSubmit, pristine, submitting } = this.props;
+    const { classes, handleSubmit, pristine, submitting, loading } = this.props;
 
     return (
-      <form className={classes.root} onSubmit={handleSubmit(this.handleSubmit)}>
-        <Field
-          name="email"
-          component={FormHelper.textField}
-          type="email"
-          required
-          fullWidth
-          label="Email:"
-        />
-        <Field
-          name="password"
-          component={FormHelper.textField}
-          type="password"
-          required
-          fullWidth
-          label="Password:"
-        />
-        <Button
-          color="primary"
-          variant="outlined"
-          type="submit"
-          disabled={pristine || submitting}
+      <React.Fragment>
+        <LoadingScreen open={loading} />
+        <form
+          className={classes.root}
+          onSubmit={handleSubmit(this.handleSubmit)}
         >
-          Submit
-        </Button>
-      </form>
+          <Field
+            name="email"
+            component={FormHelper.textField}
+            type="email"
+            required
+            fullWidth
+            label="Email:"
+          />
+          <Field
+            name="password"
+            component={FormHelper.textField}
+            type="password"
+            required
+            fullWidth
+            label="Password:"
+          />
+          <Button
+            color="primary"
+            variant="outlined"
+            type="submit"
+            disabled={pristine || submitting}
+          >
+            Submit
+          </Button>
+        </form>
+      </React.Fragment>
     );
   }
 }
