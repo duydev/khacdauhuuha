@@ -2,7 +2,7 @@ import BaseAPI from "./base";
 
 class UserAPI extends BaseAPI {
   constructor() {
-    super("/users");
+    super("api/users");
   }
 }
 
