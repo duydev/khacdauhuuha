@@ -4,7 +4,7 @@ const next = require("next");
 
 const devProxy = {
   "/api": {
-    target: "https://swapi.co/api/",
+    target: "http://localhost:3030/",
     pathRewrite: { "^/api": "/" },
     changeOrigin: true
   }
