@@ -1,16 +1,9 @@
-import React from "react";
-import { connect } from "react-redux";
+import Head from 'next/head';
+import withLayout from '../utils/withLayout';
+import Layout from '../components/Layout';
 
-import Layout from "../containers/Layout";
-
-class HomePage extends React.Component {
-  render() {
-    return (
-      <Layout pageTitle="Trang Chủ">
-        <div>Hello World</div>
-      </Layout>
-    );
-  }
+function Home() {
+  return <div className="homepage">Hello World</div>;
 }
 
-export default connect()(HomePage);
+export default withLayout(Layout, Home);
