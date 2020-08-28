@@ -7,10 +7,7 @@ import { withRouter } from 'next/router';
 import HomeIcon from '@material-ui/icons/Home';
 
 const MainMenu = ({ classes, router: { pathname } }) => {
-  const pages = [
-    { path: '/', title: 'Trang Chủ' },
-    { path: '/demo', title: 'Page Demo' }
-  ];
+  const pages = [{ path: '/', title: 'Trang Chủ' }];
 
   return (
     <List className={classes.root}>

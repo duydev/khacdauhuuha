@@ -13,7 +13,7 @@ const styles = theme => ({
     }
   },
   menuItemActive: {
-    backgroundColor: 'rgba(0,0,0,0.6)'
+    backgroundColor: 'rgba(0,0,0,0.3) !important'
   },
   homeIcon: {
     width: '1em',
