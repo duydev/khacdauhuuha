@@ -2,7 +2,7 @@ const styles = theme => ({
   root: {
     display: 'flex',
     backgroundColor: 'blue',
-    padding: theme.spacing(0, 3)
+    padding: theme.spacing(0, 8)
   },
   menuItem: {
     width: 'unset',
