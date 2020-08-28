@@ -4,7 +4,8 @@ import { initGA, logPageView } from '../../utils/ga.utils';
 import { withStyles, Paper } from '@material-ui/core';
 import styles from './styles';
 
-console.log(styles);
+import Header from '../Header';
+import Footer from '../Footer';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -17,11 +18,13 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, children } = this.props;
 
     return (
       <div className={classes.root}>
-        <Paper>{this.props.children}</Paper>
+        <Header />
+        <div className={classes.content}>{children}</div>
+        <Footer />
       </div>
     );
   }
