@@ -1,8 +1,11 @@
 const styles = theme => ({
   root: {},
-  logo: {},
+  logo: {
+    padding: theme.spacing(1),
+    margin: theme.spacing(0, 16)
+  },
   logoImage: {
-    height: '40px',
+    height: '60px',
     cursor: 'pointer'
   }
 });

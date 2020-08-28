@@ -6,8 +6,8 @@ import styles from './styles';
 
 const Footer = ({ classes }) => (
   <Grid className={classes.root}>
-    &copy; {new Date().getFullYear()} - Khắc dấu Hữu Hạ. Made with{' '}
-    <FavoriteIcon className={classes.heart} /> by{' '}
+    &copy; {new Date().getFullYear()} - <strong>Khắc dấu Hữu Hạ</strong>. Made
+    with <FavoriteIcon className={classes.heart} /> by{' '}
     <a className={classes.link} href="https://duydev.me">
       Trần Nhật Duy
     </a>

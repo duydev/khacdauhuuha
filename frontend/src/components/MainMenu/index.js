@@ -4,6 +4,7 @@ import { withStyles, List, ListItem } from '@material-ui/core';
 import styles from './styles';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
+import HomeIcon from '@material-ui/icons/Home';
 
 const MainMenu = ({ classes, router: { pathname } }) => {
   const pages = [
@@ -20,6 +21,7 @@ const MainMenu = ({ classes, router: { pathname } }) => {
             button
             selected={pathname === path}
           >
+            {path === '/' && <HomeIcon className={classes.homeIcon} />}
             {title}
           </ListItem>
         </Link>

@@ -1,6 +1,8 @@
 const styles = theme => ({
   root: {
-    //
+    textAlign: 'center',
+    backgroundColor: '#ccc',
+    padding: theme.spacing(1, 0)
   },
   heart: {
     color: 'red',
