@@ -1,4 +1,4 @@
-export default theme => ({
+const styles = theme => ({
   root: {},
   logo: {},
   logoImage: {
@@ -6,3 +6,5 @@ export default theme => ({
     cursor: 'pointer'
   }
 });
+
+export default styles;

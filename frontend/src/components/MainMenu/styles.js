@@ -1,4 +1,4 @@
-export default theme => ({
+const styles = theme => ({
   root: {
     display: 'flex',
     backgroundColor: 'blue'
@@ -7,3 +7,5 @@ export default theme => ({
     width: 'unset'
   }
 });
+
+export default styles;

@@ -1,4 +1,4 @@
-export default theme => ({
+const styles = theme => ({
   root: {
     //
   },
@@ -14,3 +14,5 @@ export default theme => ({
     }
   }
 });
+
+export default styles;
