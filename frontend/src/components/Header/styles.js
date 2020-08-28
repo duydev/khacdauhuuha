@@ -1,8 +1,8 @@
 export default theme => ({
-  root: {
-    //
-  },
-  logo: {
-    height: '40px'
+  root: {},
+  logo: {},
+  logoImage: {
+    height: '40px',
+    cursor: 'pointer'
   }
 });

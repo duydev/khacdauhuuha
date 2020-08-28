@@ -15,4 +15,8 @@ const Footer = ({ classes }) => (
   </Grid>
 );
 
+Footer.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
 export default withStyles(styles, { name: 'Footer' })(Footer);
