@@ -7,7 +7,13 @@ const styles = theme => ({
   menuItem: {
     width: 'unset',
     fontWeight: 700,
-    color: '#fff'
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: 'rgba(0,0,0,0.1)'
+    }
+  },
+  menuItemActive: {
+    backgroundColor: 'rgba(0,0,0,0.6)'
   },
   homeIcon: {
     width: '1em',

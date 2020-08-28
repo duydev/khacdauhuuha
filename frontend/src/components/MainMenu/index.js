@@ -18,6 +18,7 @@ const MainMenu = ({ classes, router: { pathname } }) => {
         <Link key={path} href={path}>
           <ListItem
             className={classes.menuItem}
+            classes={{ selected: classes.menuItemActive }}
             button
             selected={pathname === path}
           >
