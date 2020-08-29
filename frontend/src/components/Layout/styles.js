@@ -1,8 +1,12 @@
 const styles = theme => ({
-  root: {},
+  root: {
+    display: 'flex',
+    flexFlow: 'column',
+    minHeight: '100vh'
+  },
   content: {
-    minHeight: 'calc(100vh - 157px)',
-    padding: theme.spacing(0, 8)
+    padding: theme.spacing(0, 8),
+    flex: 1
   }
 });
 
