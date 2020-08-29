@@ -5,8 +5,13 @@ const styles = theme => ({
     minHeight: '100vh'
   },
   content: {
-    padding: theme.spacing(0, 8),
-    flex: 1
+    flex: 1,
+    padding: theme.spacing(0, 1)
+  },
+  [theme.breakpoints.up('md')]: {
+    content: {
+      padding: theme.spacing(0, 8)
+    }
   }
 });
 
