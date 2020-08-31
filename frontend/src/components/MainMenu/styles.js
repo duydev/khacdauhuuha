@@ -2,7 +2,7 @@ const styles = theme => ({
   root: {
     display: 'flex',
     backgroundColor: 'blue',
-    padding: theme.spacing(0, 8)
+    padding: theme.spacing(0, 2)
   },
   menuItem: {
     width: 'unset',
@@ -22,7 +22,7 @@ const styles = theme => ({
   },
   [theme.breakpoints.up('md')]: {
     root: {
-      padding: theme.spacing(0, 2)
+      padding: theme.spacing(0, 8)
     }
   }
 });
