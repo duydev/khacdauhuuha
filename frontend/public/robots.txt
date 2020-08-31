@@ -4,3 +4,5 @@ Allow: /
 Allow: /images
 
 Disallow: /*
+
+Sitemap: https://khacdauhuuha.com/sitemap.xml
