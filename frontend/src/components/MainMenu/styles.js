@@ -19,6 +19,11 @@ const styles = theme => ({
   homeIcon: {
     width: '1em',
     marginRight: theme.spacing(1)
+  },
+  [theme.breakpoints.up('md')]: {
+    root: {
+      padding: theme.spacing(0, 2)
+    }
   }
 });
 
